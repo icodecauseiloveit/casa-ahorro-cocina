@@ -45,35 +45,37 @@ export const PurchaseNotification = () => {
   });
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    const scheduleNext = () => {
+      // Random interval between 10 and 30 seconds
+      const nextDelay = Math.random() * 25000 + 20000;
+      timeoutId = setTimeout(showNotification, nextDelay);
+    };
+
     const showNotification = () => {
       const randomName = colombianNames[Math.floor(Math.random() * colombianNames.length)];
       const randomCity = colombianCities[Math.floor(Math.random() * colombianCities.length)];
-      
+
       setCurrentPurchase({
         name: randomName,
         city: randomCity,
       });
       setIsVisible(true);
 
-      // Hide after 4 seconds
+      // Hide after 4 seconds and then schedule the next one
       setTimeout(() => {
         setIsVisible(false);
+        scheduleNext();
       }, 4000);
     };
 
     // Show first notification after 5-10 seconds
     const initialDelay = Math.random() * 5000 + 5000;
-    const initialTimeout = setTimeout(showNotification, initialDelay);
-
-    // Then show every 8-15 seconds
-    const interval = setInterval(() => {
-      const randomDelay = Math.random() * 7000 + 8000;
-      setTimeout(showNotification, randomDelay);
-    }, 15000);
+    timeoutId = setTimeout(showNotification, initialDelay);
 
     return () => {
-      clearTimeout(initialTimeout);
-      clearInterval(interval);
+      clearTimeout(timeoutId);
     };
   }, []);
 
@@ -82,13 +84,13 @@ export const PurchaseNotification = () => {
   return (
     <div className="fixed bottom-24 left-4 z-50 animate-in slide-in-from-left duration-300">
       <div className="bg-card border border-border rounded-lg shadow-lg p-4 max-w-xs relative">
-        <button 
+        <button
           onClick={() => setIsVisible(false)}
           className="absolute top-2 right-2 text-muted-foreground hover:text-foreground transition-colors"
         >
           <X className="w-4 h-4" />
         </button>
-        
+
         <div className="flex items-start gap-3 pr-4">
           <div className="w-10 h-10 bg-success/20 rounded-full flex items-center justify-center shrink-0">
             <ShoppingCart className="w-5 h-5 text-success" />
