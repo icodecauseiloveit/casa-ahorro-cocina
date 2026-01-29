@@ -35,6 +35,16 @@ export const HeroSection = () => {
             <span className="text-2xl sm:text-3xl font-bold text-gradient-gold">{landingContent.hero.price.ctaProps} {landingContent.hero.price.discounted}</span>
           </div>
 
+
+          {/* Hero Image */}
+          <div className="mb-10 max-w-2xl mx-auto">
+            <img
+              src="/hero-image-recetas.png"
+              alt="Recetas saludables y deliciosas"
+              className="w-full h-auto rounded-2xl shadow-2xl border-4 border-primary/20"
+            />
+          </div>
+
           {/* CTA Button */}
           <div className="mb-10 flex justify-center">
             <CTAButton size="mega">
