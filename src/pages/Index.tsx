@@ -13,25 +13,31 @@ import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { PSSection } from "@/components/landing/PSSection";
 import { FooterBadges } from "@/components/landing/FooterBadges";
 import { StickyBar } from "@/components/landing/StickyBar";
+import { StickyHeader } from "@/components/landing/StickyHeader";
+import { PurchaseNotification } from "@/components/landing/PurchaseNotification";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <HeroSection />
-      <AgitationSection />
-      <SolutionSection />
-      <VaultContentsSection />
-      <BonusSection />
-      <MathSection />
-      <ValueStackSection />
-      <TestimonialsSection />
-      <GuaranteeSection />
-      <UrgencySection />
-      <FAQSection />
-      <FinalCTASection />
-      <PSSection />
-      <FooterBadges />
+      <StickyHeader />
+      <div className="pt-16">
+        <HeroSection />
+        <AgitationSection />
+        <SolutionSection />
+        <VaultContentsSection />
+        <BonusSection />
+        <MathSection />
+        <ValueStackSection />
+        <TestimonialsSection />
+        <GuaranteeSection />
+        <UrgencySection />
+        <FAQSection />
+        <FinalCTASection />
+        <PSSection />
+        <FooterBadges />
+      </div>
       <StickyBar />
+      <PurchaseNotification />
     </div>
   );
 };
