@@ -35,7 +35,7 @@ export const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="mb-10">
+          <div className="mb-10 flex justify-center">
             <CTAButton size="mega">
               SÍ, QUIERO DEJAR DE TIRAR PLATA EN DOMICILIOS
             </CTAButton>
