@@ -1,33 +1,8 @@
 import { X, Check, ArrowRight } from "lucide-react";
+import { landingContent } from "@/data/landingContent";
 
 export const SolutionSection = () => {
-  const beforeItems = [
-    "Abres Rappi",
-    "Scroll infinito decidiendo qué pedir",
-    "Escoges lo mismo de siempre",
-    "$45.000 que se van",
-    "Esperas 50 minutos",
-    "Llega frío",
-    "Te sientes mal después de comer",
-  ];
-
-  const afterItems = [
-    "Abres WhatsApp",
-    "Ves el mensaje: 'Cena de hoy: Pollo al limón con vegetales (20 min)'",
-    "Ingredientes ya los tienes (los compraste el domingo con la lista)",
-    "20 minutos después estás comiendo",
-    "Gastaste $8.000 en ingredientes (te alcanza para 4 porciones)",
-    "Sabor casero, caliente, sin culpa",
-    "Ahorraste $37.000 en un solo día",
-  ];
-
-  const benefits = [
-    "Dejar de depender de domicilios de una vez por todas",
-    "Cocinar comidas deliciosas en MENOS tiempo del que tardas esperando Rappi",
-    "Nunca más preguntarte '¿qué cocino hoy?'",
-    "Ahorrar mínimo $600.000 al mes (eso es más de $7.000.000 al año)",
-    "Comer más sano sin que sepa a 'comida de dieta'",
-  ];
+  const { before, after, vaultDetails } = landingContent.solution;
 
   return (
     <section className="py-16 sm:py-24">
@@ -35,24 +10,24 @@ export const SolutionSection = () => {
         {/* Main Title */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            El Vault de Recetas Saludables:{" "}
-            <span className="text-gradient-fire">200 Recetas</span>{" "}
-            Que Destruyen Tu Dependencia de Rappi
+            {landingContent.solution.title.prefix}{" "}
+            <span className="text-gradient-fire">{landingContent.solution.title.highlight}</span>{" "}
+            {landingContent.solution.title.suffix}
           </h2>
         </div>
 
         {/* Before/After Scenario */}
         <div className="max-w-4xl mx-auto mb-20">
           <p className="text-xl text-center text-muted-foreground mb-10">
-            Imagina esto: Son las 7pm. Llegas a casa después de un día pesado.
+            {landingContent.solution.intro}
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* BEFORE */}
             <div className="p-6 bg-destructive/10 border-2 border-destructive/30 rounded-xl">
-              <h3 className="text-2xl font-bold text-destructive mb-6 text-center">ANTES</h3>
+              <h3 className="text-2xl font-bold text-destructive mb-6 text-center">{before.title}</h3>
               <div className="space-y-3">
-                {beforeItems.map((item, index) => (
+                {before.items.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <X className="w-5 h-5 text-destructive shrink-0 mt-0.5" />
                     <span className="text-muted-foreground">{item}</span>
@@ -63,9 +38,9 @@ export const SolutionSection = () => {
 
             {/* AFTER */}
             <div className="p-6 bg-success/10 border-2 border-success/30 rounded-xl">
-              <h3 className="text-2xl font-bold text-success mb-6 text-center">AHORA</h3>
+              <h3 className="text-2xl font-bold text-success mb-6 text-center">{after.title}</h3>
               <div className="space-y-3">
-                {afterItems.map((item, index) => (
+                {after.items.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-success shrink-0 mt-0.5" />
                     <span className="text-foreground">{item}</span>
@@ -78,9 +53,9 @@ export const SolutionSection = () => {
           {/* Savings highlight */}
           <div className="mt-8 p-6 bg-gradient-to-r from-success/20 to-success/10 border border-success/30 rounded-xl text-center">
             <p className="text-2xl font-bold">
-              En un mes, eso es más de{" "}
-              <span className="text-success">$1.000.000</span>{" "}
-              de ahorro.
+              {landingContent.solution.savings.prefix}{" "}
+              <span className="text-success">{landingContent.solution.savings.amount}</span>{" "}
+              {landingContent.solution.savings.suffix}
             </p>
           </div>
         </div>
@@ -88,15 +63,15 @@ export const SolutionSection = () => {
         {/* What is the Vault */}
         <div className="max-w-3xl mx-auto">
           <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10">
-            ¿Qué Es El Vault Exactamente?
+            {vaultDetails.title}
           </h3>
 
           <p className="text-lg text-muted-foreground text-center mb-10">
-            Es el sistema completo que necesitas para:
+            {vaultDetails.subtitle}
           </p>
 
           <div className="space-y-4 mb-10">
-            {benefits.map((benefit, index) => (
+            {vaultDetails.benefits.map((benefit, index) => (
               <div
                 key={index}
                 className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg hover:border-primary/50 transition-colors"
@@ -111,8 +86,8 @@ export const SolutionSection = () => {
 
           <div className="text-center p-6 bg-primary/10 border border-primary/30 rounded-xl">
             <p className="text-xl font-bold">
-              Un solo pago. Un sistema completo.{" "}
-              <span className="text-primary">Para siempre.</span>
+              {vaultDetails.footer.text}{" "}
+              <span className="text-primary">{vaultDetails.footer.highlight}</span>
             </p>
           </div>
         </div>

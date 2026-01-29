@@ -1,16 +1,9 @@
 import { Check, CreditCard, Shield, Zap, Clock } from "lucide-react";
 import { CTAButton } from "./CTAButton";
+import { landingContent } from "@/data/landingContent";
 
 export const ValueStackSection = () => {
-  const items = [
-    { name: "Vault de 200 Recetas", value: "$388.000" },
-    { name: "Canal VIP Diario (de por vida)", value: "$1.188.000" },
-    { name: "Meal Prep 12 Semanas", value: "$388.000" },
-    { name: "Mix & Match System", value: "$268.000" },
-    { name: "Guía de Sustituciones", value: "$188.000" },
-    { name: "Grupo VIP WhatsApp", value: "$788.000" },
-    { name: "Desafío 30 Días", value: "$268.000" },
-  ];
+  const { stack, totalValue, discountBadge, strikethroughPrices, finalPrice, guarantee, cta } = landingContent.pricing;
 
   return (
     <section className="py-16 sm:py-24">
@@ -22,7 +15,7 @@ export const ValueStackSection = () => {
         <div className="max-w-2xl mx-auto">
           {/* Stack Items */}
           <div className="space-y-3 mb-8">
-            {items.map((item, index) => (
+            {stack.map((item, index) => (
               <div
                 key={index}
                 className="flex items-center justify-between p-4 bg-card border border-border rounded-lg"
@@ -39,31 +32,31 @@ export const ValueStackSection = () => {
           {/* Total Value */}
           <div className="p-6 bg-card border-2 border-primary rounded-xl text-center mb-8">
             <div className="text-lg text-muted-foreground mb-2">VALOR TOTAL:</div>
-            <div className="text-4xl font-bold text-gradient-gold mb-4">$3.476.000</div>
-            
+            <div className="text-4xl font-bold text-gradient-gold mb-4">{totalValue}</div>
+
             <div className="inline-block px-4 py-2 bg-destructive/20 text-destructive font-bold rounded-full mb-6">
-              Descuento del 94%
+              {discountBadge}
             </div>
 
-            <div className="space-y-2 mb-6">
-              <div className="text-2xl text-muted-foreground strikethrough-price">$3.476.000</div>
-              <div className="text-2xl text-muted-foreground strikethrough-price">$988.000</div>
-              <div className="text-2xl text-muted-foreground strikethrough-price">$388.000</div>
+            <div className="flex flex-col items-center gap-2 mb-6">
+              {strikethroughPrices.map((price, index) => (
+                <div key={index} className="text-2xl text-muted-foreground strikethrough-price">{price}</div>
+              ))}
             </div>
 
             <div className="text-lg mb-2">HOY PAGAS:</div>
-            <div className="text-5xl sm:text-6xl font-bold text-primary mb-4">$188.000</div>
+            <div className="text-5xl sm:text-6xl font-bold text-primary mb-4">{finalPrice}</div>
             <p className="text-muted-foreground">
-              Menos de lo que gastas en 5 domicilios.
+              {guarantee.text}
               <br />
-              <span className="font-bold text-foreground">Pero esto te dura TODA LA VIDA.</span>
+              <span className="font-bold text-foreground">{guarantee.highlight}</span>
             </p>
           </div>
 
           {/* CTA */}
           <div className="text-center mb-8">
             <CTAButton size="mega" className="w-full sm:w-auto">
-              SÍ, QUIERO AHORRAR MILLONES Y COMER MEJOR
+              {cta}
             </CTAButton>
           </div>
 
