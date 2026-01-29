@@ -5,7 +5,21 @@ import { landingContent } from "@/data/landingContent";
 export const UrgencySection = () => {
   const { warning, consequences, progressBar, timer, footer } = landingContent.urgency;
 
-  const [timeLeft, setTimeLeft] = useState(20 * 60); // 20 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const savedDeadline = localStorage.getItem("urgency_deadline");
+    const now = Date.now();
+    const duration = 20 * 60 * 1000; // 20 minutes
+
+    if (savedDeadline) {
+      const remaining = Math.ceil((parseInt(savedDeadline) - now) / 1000);
+      return remaining > 0 ? remaining : 0;
+    }
+
+    const newDeadline = now + duration;
+    localStorage.setItem("urgency_deadline", newDeadline.toString());
+    return 20 * 60;
+  });
+
   const spotsTotal = progressBar.spotsTotal;
   const spotsSold = progressBar.spotsSold;
   const spotsLeft = spotsTotal - spotsSold;
@@ -13,7 +27,11 @@ export const UrgencySection = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+      const savedDeadline = localStorage.getItem("urgency_deadline");
+      if (savedDeadline) {
+        const remaining = Math.ceil((parseInt(savedDeadline) - Date.now()) / 1000);
+        setTimeLeft(remaining > 0 ? remaining : 0);
+      }
     }, 1000);
     return () => clearInterval(timer);
   }, []);
