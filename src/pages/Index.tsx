@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { HeroSection } from "@/components/landing/HeroSection";
+import { AgitationSection } from "@/components/landing/AgitationSection";
+import { SolutionSection } from "@/components/landing/SolutionSection";
+import { VaultContentsSection } from "@/components/landing/VaultContentsSection";
+import { BonusSection } from "@/components/landing/BonusSection";
+import { MathSection } from "@/components/landing/MathSection";
+import { ValueStackSection } from "@/components/landing/ValueStackSection";
+import { TestimonialsSection } from "@/components/landing/TestimonialsSection";
+import { GuaranteeSection } from "@/components/landing/GuaranteeSection";
+import { UrgencySection } from "@/components/landing/UrgencySection";
+import { FAQSection } from "@/components/landing/FAQSection";
+import { FinalCTASection } from "@/components/landing/FinalCTASection";
+import { PSSection } from "@/components/landing/PSSection";
+import { FooterBadges } from "@/components/landing/FooterBadges";
+import { StickyBar } from "@/components/landing/StickyBar";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <HeroSection />
+      <AgitationSection />
+      <SolutionSection />
+      <VaultContentsSection />
+      <BonusSection />
+      <MathSection />
+      <ValueStackSection />
+      <TestimonialsSection />
+      <GuaranteeSection />
+      <UrgencySection />
+      <FAQSection />
+      <FinalCTASection />
+      <PSSection />
+      <FooterBadges />
+      <StickyBar />
     </div>
   );
 };
