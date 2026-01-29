@@ -144,6 +144,30 @@
     }
   }
 
+  /* Animated progress bar */
+  .progress-animated {
+    background: linear-gradient(90deg,
+        hsl(0 84% 60%) 0%,
+        hsl(0 84% 60%) 10%,
+        hsl(24 100% 50%) 30%,
+        hsl(45 100% 51%) 50%,
+        hsl(24 100% 50%) 70%,
+        hsl(0 84% 60%) 90%,
+        hsl(0 84% 60%) 100%);
+    background-size: 300% 100%;
+    animation: progress-flow 6s linear infinite;
+  }
+
+  @keyframes progress-flow {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    100% {
+      background-position: 300% 0%;
+    }
+  }
+
   .float-animation {
     animation: float 3s ease-in-out infinite;
   }

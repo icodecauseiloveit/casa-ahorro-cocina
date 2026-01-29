@@ -86,7 +86,7 @@ export const UrgencySection = () => {
               </div>
               <div className="h-4 bg-muted rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-fire transition-all duration-500"
+                  className="h-full progress-animated transition-all duration-600"
                   style={{ width: `${progressPercent}%` }}
                 />
               </div>
