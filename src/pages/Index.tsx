@@ -13,14 +13,14 @@ import { FinalCTASection } from "@/components/landing/FinalCTASection";
 import { PSSection } from "@/components/landing/PSSection";
 import { FooterBadges } from "@/components/landing/FooterBadges";
 import { StickyBar } from "@/components/landing/StickyBar";
-import { StickyHeader } from "@/components/landing/StickyHeader";
+
 import { PurchaseNotification } from "@/components/landing/PurchaseNotification";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <StickyHeader />
-      <div className="pt-16">
+
+      <div className="pt-0">
         <HeroSection />
         <AgitationSection />
         <SolutionSection />
