@@ -6,7 +6,12 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig({
 
-  plugins:[react(), componentTagger()],
+  plugins: [react(), componentTagger()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   server: {
     host: true,
     port: 8000,
