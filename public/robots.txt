@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://recetas-saludables-recipeslandingpage-zzkkkxo.traefik.me/sitemap.xml
