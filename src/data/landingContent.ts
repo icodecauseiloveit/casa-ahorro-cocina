@@ -3,13 +3,13 @@ import { Check, CreditCard, Shield, Zap, Clock, X, AlertTriangle, Gift, MessageC
 
 export const landingContent = {
     hero: {
-        badge: "🇨🇴 Más de 8,000 colombianos ya ahorraron millones",
+        badge: "🇨🇴 Más de 3,000 colombianos ya ahorraron millones",
         headline: {
             prefix: "Cómo Dejar de Gastar",
             highlight: "$800.000+",
             suffix: "al Mes en Domicilios y Comer Más Rico, Más Sano y en Menos Tiempo"
         },
-        subheadline: "200 Recetas Saludables Listas Para Usar + Sistema que Te Dice Exactamente Qué Cocinar Cada Día + Acceso de Por Vida al Canal Privado de Recetas Diarias",
+        subheadline: "210 Recetas Saludables Listas Para Usar + Sistema que Te Dice Exactamente Qué Cocinar Cada Día + Acceso de Por Vida al Canal Privado de Recetas Diarias",
         price: {
             original: "$3.476.000",
             discounted: "$188.000",
@@ -189,7 +189,7 @@ export const landingContent = {
                 number: 3,
                 title: "Mix & Match System - Generador de Menús Infinitos",
                 value: "$268.000",
-                description: "La herramienta que convierte 200 recetas en 343.000 combinaciones diferentes.",
+                description: "La herramienta que convierte 210 recetas en 343.000 combinaciones diferentes.",
                 highlights: [
                     "Filtra por: tiempo disponible, ingredientes que tienes, objetivo",
                     "Genera menús automáticos",
@@ -223,7 +223,7 @@ export const landingContent = {
                 title: "Grupo VIP de Accountability en WhatsApp",
                 value: "$788.000/año",
                 tag: "GRATIS DE POR VIDA",
-                description: "8.000+ colombianos que dejaron los domicilios usando estas mismas recetas.",
+                description: "3.000+ colombianos que dejaron los domicilios usando estas mismas recetas.",
                 highlights: [
                     "Comparten fotos de sus platos",
                     "Tips de dónde comprar más barato",
@@ -260,8 +260,8 @@ export const landingContent = {
                 title: "200 Recetas Organizadas Por Categoría",
                 categories: [
                     { count: "70", name: "Desayunos", note: "(deja de comprar pandebono y café con leche en $15.000)" },
-                    { count: "70", name: "Almuerzos", note: "(adiós a los $35.000 diarios del corrientazo)" },
-                    { count: "60", name: "Cenas", note: "(no más pizza a $45.000)" },
+                    { count: "70", name: "Almuerzos", note: "(adiós a los $19.000 diarios del corrientazo)" },
+                    { count: "70", name: "Cenas", note: "(no más pizza a $45.000)" },
                 ]
             },
             rotation: {
@@ -324,12 +324,12 @@ export const landingContent = {
             icon: TrendingDown,
             items: [
                 { label: "Desayuno (3x semana)", calc: "$15.000 x 12 =", value: "$180.000" },
-                { label: "Almuerzo (5x semana)", calc: "$35.000 x 20 =", value: "$700.000" },
+                { label: "Almuerzo (5x semana)", calc: "$19.000 x 20 =", value: "$380.000" },
                 { label: "Cena (4x semana)", calc: "$45.000 x 16 =", value: "$720.000" },
                 { label: "Domingos 'porque sí'", calc: "$60.000 x 4 =", value: "$240.000" },
             ],
-            totalMonth: { label: "TOTAL AL MES:", value: "$1.840.000" },
-            totalYear: { label: "TOTAL AL AÑO:", value: "$22.080.000" }
+            totalMonth: { label: "TOTAL AL MES:", value: "$1.520.000" },
+            totalYear: { label: "TOTAL AL AÑO:", value: "$18.240.000" }
         },
         scenarioB: {
             title: "ESCENARIO B: Usas El Vault",
@@ -339,11 +339,11 @@ export const landingContent = {
                 { label: "Vault (pago único)", calc: "", value: "$188.000", note: "(primer mes)" },
             ],
             totalMonth: { label: "TOTAL PRIMER MES:", value: "$908.000" },
-            totalYear: { label: "TOTAL MESES 2-12:", value: "$720.000/mes" }
+            totalYear: { label: "TOTAL MESES 2-12:", value: "$10.800.000/mes" }
         },
         savings: {
-            year1: { label: "AHORRO PRIMER AÑO:", value: "$12.200.000" },
-            year5: { label: "En 5 años ahorras:", value: "$61.000.000" },
+            year1: { label: "AHORRO PRIMER AÑO:", value: "$7.440.000" },
+            year5: { label: "En 5 años ahorras:", value: "$36.600.000" },
             comparison: {
                 text: "POR EL PRECIO DE 4 DOMICILIOS",
                 subtext: "(que te duran 4 días), obtienes un sistema que te ahorra",
@@ -405,16 +405,16 @@ Ahora cocino en 25 minutos. Como mejor. Gasto $10.000. ¿Por qué no hice esto a
     guarantee: {
         title: {
             prefix: 'Mi Garantía "Anti-Arrepentimiento" de',
-            highlight: "60 Días",
+            highlight: "7 Días",
             icon: Shield
         },
         intro: "Mira, sé que $188.000 no es regalado. Es casi una semana de domicilios para muchas familias.",
         subintro: "Por eso hago esto:",
         box: {
-            title: "Usa El Vault por 60 días completos.",
-            condition: "Si en esos 60 días no:",
+            title: "Usa El Vault por 7 días completos.",
+            condition: "Si en esos 7 días no:",
             points: [
-                "Ahorras AL MENOS $400.000 en domicilios",
+                "Ahorras AL MENOS $180.000 en domicilios",
                 "Cocinas más rápido de lo que tardas esperando Rappi",
                 "Comes más rico que cualquier domicilio",
                 "Te ENAMORAS del sistema",
@@ -424,13 +424,13 @@ Ahora cocino en 25 minutos. Como mejor. Gasto $10.000. ¿Por qué no hice esto a
         bonusPromise: "Y te quedas con todos los bonos descargables.",
         reason: {
             title: "¿Por qué hago esto?",
-            text: 'Porque tengo 8.000+ personas usando esto CADA DÍA. Sé que funciona. Sé que vas a ahorrar. Sé que en 30 días vas a pensar "esto fue la mejor decisión del año".'
+            text: 'Porque tengo 3.000+ personas usando esto CADA DÍA. Sé que funciona. Sé que vas a ahorrar. Sé que en 30 días vas a pensar "esto fue la mejor decisión del año".'
         },
         risk: {
             prefix: "El riesgo es 100% mío. El beneficio es",
             highlight: "100% tuyo."
         },
-        badge: "GARANTÍA 60 DÍAS - 100% REEMBOLSO SIN PREGUNTAS"
+        badge: "GARANTÍA 7 DÍAS - 100% REEMBOLSO SIN PREGUNTAS"
     },
     urgency: {
         warning: {
@@ -497,9 +497,9 @@ Pollo, arroz, pasta, verduras, huevos, frijoles, lentejas = lo normal que ya com
                 question: "¿De verdad voy a ahorrar $600.000+ al mes?",
                 answer: `Hagamos la cuenta conservadora:
 
-• Almuerzos de oficina: $35.000 x 20 días = $700.000
+• Almuerzos de oficina: $19.000 x 20 días = $380.000
 • Con El Vault: $10.000 x 20 días = $200.000
-• Ahorro solo en almuerzos: $500.000
+• Ahorro solo en almuerzos: $180.000
 
 Eso SIN CONTAR cenas, desayunos, fines de semana.
 
@@ -645,7 +645,7 @@ Aunque solo el 2.7% lo pide. Porque funciona.`,
         badges: [
             { icon: Check, text: "Pago único, sin suscripciones" },
             { icon: Shield, text: "🇨🇴 Hecho para colombianos" },
-            { icon: Shield, text: "💯 Garantía 60 días" },
+            { icon: Shield, text: "💯 Garantía 7 días" },
             { icon: CreditCard, text: "🔒 Compra 100% segura" },
         ],
         copyright: "© 2025 El Vault de Recetas Saludables. Todos los derechos reservados."
