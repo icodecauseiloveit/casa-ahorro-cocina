@@ -77,7 +77,7 @@ export const landingContent = {
     solution: {
         title: {
             prefix: "El Vault de Recetas Saludables:",
-            highlight: "200 Recetas",
+            highlight: "210 Recetas",
             suffix: "Que Destruyen Tu Dependencia de Rappi"
         },
         intro: "Imagina esto: Son las 7pm. Llegas a casa después de un día pesado.",
@@ -128,7 +128,7 @@ export const landingContent = {
     },
     pricing: {
         stack: [
-            { name: "Vault de 200 Recetas", value: "$388.000" },
+            { name: "Vault de 210 Recetas", value: "$388.000" },
             { name: "Canal VIP Diario (de por vida)", value: "$1.188.000" },
             { name: "Meal Prep 12 Semanas", value: "$388.000" },
             { name: "Mix & Match System", value: "$268.000" },
@@ -254,10 +254,10 @@ export const landingContent = {
             prefix: "Esto Es Lo Que Recibes",
             highlight: "Cuando Ordenes Hoy:"
         },
-        subtitle: "EL VAULT COMPLETO DE 200 RECETAS",
+        subtitle: "EL VAULT COMPLETO DE 210 RECETAS",
         sections: {
             recipes: {
-                title: "200 Recetas Organizadas Por Categoría",
+                title: "210 Recetas Organizadas Por Categoría",
                 categories: [
                     { count: "70", name: "Desayunos", note: "(deja de comprar pandebono y café con leche en $15.000)" },
                     { count: "70", name: "Almuerzos", note: "(adiós a los $19.000 diarios del corrientazo)" },
@@ -476,10 +476,10 @@ Ahora cocino en 25 minutos. Como mejor. Gasto $10.000. ¿Por qué no hice esto a
         subtitle: "(Y Sus Respuestas Honestas)",
         items: [
             {
-                question: "¿200 recetas son suficientes o me voy a aburrir?",
+                question: "¿210 recetas son suficientes o me voy a aburrir?",
                 answer: `Piénsalo: ¿cuántas recetas cocinas ahora? ¿10? ¿15?
 
-Con 200 recetas puedes comer algo diferente cada día durante más de 6 meses SIN REPETIR.
+Con 210 recetas puedes comer algo diferente cada día durante más de 6 meses SIN REPETIR.
 
 Además, el Mix & Match System te da 343.000 combinaciones. Literalmente es IMPOSIBLE que te aburras.
 
@@ -591,7 +591,7 @@ Aunque solo el 2.7% lo pide. Porque funciona.`,
             badge: "RECOMENDADO",
             list: [
                 "$188.000 UNA SOLA VEZ (pago único)",
-                "200 recetas deliciosas y sanas",
+                "210 recetas deliciosas y sanas",
                 "Comida lista en 20-30 minutos",
                 "Ahorro de $600.000-$1.200.000/mes",
                 "Habilidad de por vida",
